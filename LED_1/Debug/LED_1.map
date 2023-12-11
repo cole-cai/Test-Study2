@@ -1,0 +1,260 @@
+******************************************************************************
+         TMS320C55x COFF Linker PC Version 2.56                
+******************************************************************************
+>> Linked Tue Aug 20 10:54:03 2013
+
+OUTPUT FILE NAME:   <./Debug/LED_1.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00008406
+
+
+MEMORY CONFIGURATION
+
+                  name            origin    length      used    attr    fill
+                                 (bytes)   (bytes)    (bytes)
+         ----------------------  --------  ---------  --------  ----  --------
+         MMR                     00000000   000000c0  00000000  RWIX
+         SPRAM                   000000c0   00000020  00000000  RWIX
+         VECS                    00000100   00000100  00000100  RWIX
+         DARAM0                  00000200   00007e00  00000812  RWIX
+         DARAM1                  00008000   00008000  00000526  RWIX
+         CE0                     00010000   003f0000  00000000  RWIX
+         FLASH                   00400000   00100000  00000000  RWIX
+         EXTEND                  00500000   00300000  00000000  RWIX
+         CE2                     00800000   00400000  00000000  RWIX
+         CE3                     00c00000   003f8000  00000000  RWIX
+         PDROM                   00ff8000   00007f00  00000000  RWIX
+         RESET_VECS              00ffff00   00000100  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+.vectors     0     00000100  [ 00000080 ] 00000100          *   
+                   00000100  [ 00000080 ] 00000100          *   vectors.obj (.vectors)
+
+.sysmem      0   [ 00000200 ]  00000100          *   00000000   UNINITIALIZED
+
+dmaMem       0   [ 00000200 ]  00000100          *   00000000   UNINITIALIZED
+
+.stack       0   [ 00000200 ]  00000100          *   000001f4   UNINITIALIZED
+
+.sysstack 
+*            0   [ 000005e8 ]  000002f4          *   000001f4   UNINITIALIZED
+
+.csldata     0   [ 000009d0 ]  000004e8          *   00000021   UNINITIALIZED
+                 [ 000009d0 ]  000004e8          *   00000020   csl5502.lib : csl_csldat.obj (.csldata:SYS_data)
+                 [ 00000a10 ]  00000508          *   00000001               : csl_emifdat.obj (.csldata:EMIF_data)
+
+.cio         0   [ 00008000 ]  00004000          *   00000000   UNINITIALIZED
+
+.data        0   [ 00008000 ]  00004000          *   00000000   UNINITIALIZED
+
+.const       0   [ 00008000 ]  00004000          *   00000000   UNINITIALIZED
+
+.cinit       0   [ 00008000 ]  00004000          *   00000058   
+                 [ 00008000 ]  00004000          *   00000023   csl5502.lib : csl_csldat.obj (.cinit)
+                 [ 00008046 ]  00004023          *   00000018   led_1.obj (.cinit)
+                 [ 00008076 ]  0000403b          *   0000000e   rts55.lib : exit.obj (.cinit)
+                 [ 00008092 ]  00004049          *   0000000a             : _lock.obj (.cinit)
+                 [ 000080a6 ]  00004053          *   00000004   csl5502.lib : csl_emifdat.obj (.cinit)
+                 [ 000080ae ]  00004057          *   00000001   --HOLE-- [fill = 0]
+
+.text        0     000080b0  [ 00004058 ] 000003b6          *   
+                   000080b0  [ 00004058 ] 000000cc          *   csl5502.lib : emifB_cfg.obj (.text:EMIF_config)
+                   0000817c  [ 000040be ] 000000aa          *   led_1.obj (.text)
+                   00008226  [ 00004113 ] 00000002          *   --HOLE-- [fill = 20]
+                   00008228  [ 00004114 ] 000000a4          *   csl5502.lib : pll_setfrq.obj (.text)
+                   000082cc  [ 00004166 ] 0000000d          *               : irq_gdisab.obj (.text:IRQ_globalDisable)
+                   000082d9  [ 0000416c+] 00000002          *   vectors.obj (.text)
+                   000082db  [ 0000416d+] 00000001          *   --HOLE-- [fill = 20]
+                   000082dc  [ 0000416e ] 0000000c          *   csl5502.lib : irq_grest.obj (.text:IRQ_globalRestore)
+                   000082e8  [ 00004174 ] 0000000c          *               : csl.obj (.text:CSL_init)
+                   000082f4  [ 0000417a ] 0000000b          *               : _csl_init.obj (.text:_CSL_init)
+                   000082ff  [ 0000417f+] 00000001          *   --HOLE-- [fill = 20]
+                   00008300  [ 00004180 ] 00000002          *               : csl.obj (.text)
+                   00008302  [ 00004181 ] 00000099          *   rts55.lib : exit.obj (.text)
+                   0000839b  [ 000041cd+] 0000006b          *             : autoinit.obj (.text)
+                   00008406  [ 00004203 ] 00000048          *             : boot.obj (.text)
+                   0000844e  [ 00004227 ] 00000010          *             : _lock.obj (.text)
+                   0000845e  [ 0000422f ] 00000007          *             : exit.obj (.text:CIO_breakpoint)
+                   00008465  [ 00004232+] 00000001          *   --HOLE-- [fill = 20]
+
+.bss         0   [ 00008468 ]  00004234          *   00000060   UNINITIALIZED
+                 [ 00008468 ]  00004234          *   00000046   rts55.lib : exit.obj (.bss)
+                 [ 000084f4 ]  0000427a          *   00000015   led_1.obj (.bss)
+                 [ 00008520 ]  00004290          *   00000004   rts55.lib : _lock.obj (.bss)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+            00004234    .bss
+            00004000    .data
+000080b0                .text
+0000845f                C$$EXIT
+00008300                _CSL5502_LIB_
+            00000508    _CSL_EmifData
+            000004e8    _CSL_SysData
+000082e8                _CSL_init
+000080b0                _EMIF_config
+000082cc                _IRQ_globalDisable
+000082dc                _IRQ_globalRestore
+            0000427a    _MyEmifConfig
+00008228                _PLL_setFreq
+00000100                _VECSTART
+000082f4                __CSL_init
+000003e8                __STACK_SIZE
+000003e8                __SYSSTACK_SIZE
+            00004234    ___bss__
+            00004000    ___cinit__
+            00004000    ___data__
+            00004000    ___edata__
+            00004294    ___end__
+00008466                ___etext__
+ffffffff                ___pinit__
+000080b0                ___text__
+            00004276    __cleanup_ptr
+            00004278    __dtors_ptr
+            00004290    __lock
+0000844e                __nop
+00008450                __register_lock
+00008457                __register_unlock
+            00000100    __stack
+            000002f4    __sysstack
+            00004292    __unlock
+0000845e                _abort
+00008351                _atexit
+0000839b                _auto_init
+00008406                _c_int00
+00008204                _delay
+00008302                _exit
+0000818c                _main
+            00004000    cinit
+            00004000    edata
+            00004294    end
+00008466                etext
+00000110                int0
+00000118                int1
+00000160                int10
+00000168                int11
+00000170                int12
+00000178                int13
+00000180                int14
+00000188                int15
+00000190                int16
+00000198                int17
+000001a0                int18
+000001a8                int19
+00000120                int2
+000001b0                int20
+000001b8                int21
+000001c0                int22
+000001c8                int23
+000001d0                int24
+000001d8                int25
+000001e0                int26
+000001e8                int27
+000001f0                int28
+000001f8                int29
+00000128                int3
+00000130                int4
+00000138                int5
+00000140                int6
+00000148                int7
+00000150                int8
+00000158                int9
+00000108                nmi
+000082d9                no_isr
+ffffffff                pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000100                _VECSTART
+00000108                nmi
+00000110                int0
+00000118                int1
+00000120                int2
+00000128                int3
+00000130                int4
+00000138                int5
+00000140                int6
+00000148                int7
+00000150                int8
+00000158                int9
+00000160                int10
+00000168                int11
+00000170                int12
+00000178                int13
+00000180                int14
+00000188                int15
+00000190                int16
+00000198                int17
+000001a0                int18
+000001a8                int19
+000001b0                int20
+000001b8                int21
+000001c0                int22
+000001c8                int23
+000001d0                int24
+000001d8                int25
+000001e0                int26
+000001e8                int27
+000001f0                int28
+000001f8                int29
+            00000100    __stack
+000003e8                __SYSSTACK_SIZE
+000003e8                __STACK_SIZE
+            000002f4    __sysstack
+            000004e8    _CSL_SysData
+            00000508    _CSL_EmifData
+            00004000    cinit
+            00004000    edata
+            00004000    .data
+            00004000    ___edata__
+            00004000    ___data__
+            00004000    ___cinit__
+000080b0                .text
+000080b0                ___text__
+000080b0                _EMIF_config
+0000818c                _main
+00008204                _delay
+00008228                _PLL_setFreq
+000082cc                _IRQ_globalDisable
+000082d9                no_isr
+000082dc                _IRQ_globalRestore
+000082e8                _CSL_init
+000082f4                __CSL_init
+00008300                _CSL5502_LIB_
+00008302                _exit
+00008351                _atexit
+0000839b                _auto_init
+00008406                _c_int00
+0000844e                __nop
+00008450                __register_lock
+00008457                __register_unlock
+0000845e                _abort
+0000845f                C$$EXIT
+00008466                etext
+00008466                ___etext__
+            00004234    .bss
+            00004234    ___bss__
+            00004276    __cleanup_ptr
+            00004278    __dtors_ptr
+            0000427a    _MyEmifConfig
+            00004290    __lock
+            00004292    __unlock
+            00004294    end
+            00004294    ___end__
+ffffffff                pinit
+ffffffff                ___pinit__
+
+[78 symbols]

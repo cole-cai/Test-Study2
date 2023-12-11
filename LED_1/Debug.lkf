@@ -1,0 +1,6 @@
+-z -c -m"./Debug/LED_1.map" -o"./Debug/LED_1.out" -stack1000 -sysstack1000 -w -x -i"C:/CCStudio_v3.3/C5500/csl/lib" -i"C:/CCStudio_v3.3/C5500/xdais/lib" -i"C:/CCStudio_v3.3/bios_5_31_02/packages/ti/bios/lib" -i"C:/CCStudio_v3.3/bios_5_31_02/packages/ti/rtdx/lib/c5500" -i"C:/CCStudio_v3.3/C5500/cgtools/lib"
+"C:\CCStudio_v3.3\MyProjects\5502_A\LED_1\yanxu5502.cmd"
+"C:\CCStudio_v3.3\MyProjects\5502_A\LED_1\Debug\led_1.obj"
+"C:\CCStudio_v3.3\MyProjects\5502_A\LED_1\Debug\vectors.obj"
+"C:\CCStudio_v3.3\MyProjects\5502_A\LED_1\csl5502.lib"
+"C:\CCStudio_v3.3\MyProjects\5502_A\LED_1\rts55.lib"
